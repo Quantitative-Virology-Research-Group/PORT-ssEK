@@ -1,0 +1,7 @@
+sample_groups: [] #Fill with comma separated list of group names, case sensitive.
+input_files: [] #Fill with comma separated list of fasta files with input sequences. They should be placed in the {project_dir}/input directory. There should be one file per group and the order must match with sample_groups.
+header_format: [] #Optionally, fill with comma separated list of header formats of fasta files above. Accepts values of "gisaid", "ncbi" or "plain". If left empty assumes "plain" for all groups.
+mode: #"ava" or "ovr" for all vs all or one vs rest comparison. If ovr, input the group of interest in the next line
+goi: #Define group of interest, only for ovr mode.
+ref_seq: #Name of fasta file containing reference genomic sequence, if used. The file should be placed in $project_dir/input.
+

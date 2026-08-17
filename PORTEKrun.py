@@ -206,13 +206,14 @@ def main():
         start_time = datetime.now()
         enriched_kmers_finder = portek.EnrichedKmersPipeline(args.project_dir, args.k)
         enriched_kmers_finder.get_basic_kmer_stats(
-            max_mem=args.max_mem, min_freq=args.min_freq
+            max_mem=args.max_mem
+            #, min_freq=args.min_freq
         )
         enriched_kmers_finder.calc_kmer_stats(
             "common",
             n_jobs=args.n_jobs,
             verbose=args.verbose,
-            false_discovery_control=args.fdr,
+            #false_discovery_control=args.fdr,
         )
         enriched_kmers_finder.plot_volcanos("common")
         enriched_kmers_found = enriched_kmers_finder.get_enriched_kmers()

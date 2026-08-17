@@ -1,0 +1,14 @@
+# Core dependencies for running PORTEK
+# Python 3.12 compatible versions
+biopython==1.85
+numpy==2.3.4
+pandas==2.3.3
+scipy==1.16.2
+scikit-learn==1.7.2
+matplotlib==3.10.7
+seaborn==0.13.2
+PyYAML==6.0.3
+
+# Testing dependencies
+pytest==8.4.2
+pytest-benchmark==5.2.1

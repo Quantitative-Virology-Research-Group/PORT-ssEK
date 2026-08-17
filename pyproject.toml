@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PORT-ssEK"
+version = "1.0.0"
+description = "Pathogen Origin Recognition Tool (using) strand-specific Enriched K-mers"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.12"
+authors = [
+    {name = "PORT-ssEK Contributor"}
+]
+keywords = ["bioinformatics", "k-mers", "genomics", "phylogenetics", "viruses", "strand-specific"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "biopython>=1.85",
+    "numpy>=2.0.0",
+    "pandas>=2.2.0",
+    "scipy>=1.14.0",
+    "scikit-learn>=1.5.0",
+    "matplotlib>=3.9.0",
+    "seaborn>=0.13.0",
+    "PyYAML>=6.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.4.2",
+    "pytest-benchmark>=5.2.1",
+]
+
+[project.scripts]
+portek = "PORTEKrun:main"
+
+[tool.setuptools]
+py-modules = ["PORTEKrun"]
+packages = ["portek"]
+
+[tool.setuptools.package-data]
+portek = ["*.yaml"]
