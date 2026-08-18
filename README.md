@@ -35,7 +35,7 @@ For detailed installation instructions, see [INSTALL.md](INSTALL.md).
    - Edit `$project_directory/config.yaml` (see Configuration section below)
    - Copy your FASTA files to `$project_directory/input/`
 
-3. **Find optimal k-mer length and get k-mers:**
+3. **Find optimal k-mer length and get strand-specific k-mers:**
    ```bash
    portek find_k $project_directory --strand_specific --min_k 5 --max_k 31
    ```
