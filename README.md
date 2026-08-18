@@ -37,22 +37,22 @@ For detailed installation instructions, see [INSTALL.md](INSTALL.md).
 
 3. **Find optimal k-mer length and get k-mers:**
    ```bash
-   portek find_k $project_directory --max_k 31
+   portek find_k $project_directory --strand_specific --min_k 5 --max_k 31
    ```
 
 4. **Identify enriched k-mers:**
    ```bash
-   portek find_enriched $project_directory -k 15
+   portek find_enriched $project_directory -k 17
    ```
 
 5. **Map k-mers to reference sequence:**
    ```bash
-   portek map $project_directory -k 15
+   portek map $project_directory -k 17
    ```
 
 6. **Construct phylogenetic tree:**
    ```bash
-   portek tree $project_directory -k 15
+   portek tree $project_directory -k 17
    ```
 
 ### Available Commands
@@ -82,6 +82,7 @@ portek find_k PROJECT_DIR [OPTIONS]
 - `PROJECT_DIR`: Path to the project directory
 
 **Options:**
+- `--strand_specific`: Non-canonical run — K and RC(K) are stored as separate integer identifiers.
 - `--min_k K`: Minimum k-mer length to test (default: 5)
 - `--max_k K`: Maximum k-mer length to test (default: 31)
 - `--n_jobs N`: Number of parallel processes (default: 4)
