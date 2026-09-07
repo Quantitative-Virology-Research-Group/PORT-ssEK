@@ -20,7 +20,7 @@ python verify_strand_differentiation.py compare \
     --project_dir ./my_portek_project \
     --sense_group   sense \
     --antisense_group antisense \
-    -k 15
+    -k 17
 """
 
 import argparse
