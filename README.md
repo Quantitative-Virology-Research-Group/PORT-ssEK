@@ -16,7 +16,7 @@ Citation\
 1. Clone this repository
 2. Navigate to the repository directory `cd PORT-ssEK-main`
 2. Ensure you have Python 3.12 installed (consider using [pyenv](https://github.com/pyenv/pyenv) for version management)
-3. Create a Python virtual environment: `python3 -m venv env`
+3. Create a Python virtual environment: `python3.12 -m venv env`
 4. Activate the environment: `source env/bin/activate` (Linux/Mac) or `env\Scripts\activate` (Windows)
 5. Install PORTEK: `pip install -e .`
 
