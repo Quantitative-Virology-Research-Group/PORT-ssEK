@@ -25,7 +25,7 @@ strand.bias.filtering <- function(df.subtype, classifier.all) {
   classifier.sub <- classifier.all[classifier.all$subtype_label == st, ]
   
   # 5. k-mers are column names — exclude non-k-mer columns
-  non_kmer_cols <- c("sample_name", "subtype_label")
+  non_kmer_cols <- c("sample_name", "subtype_label", "sample_group")
   kmer_cols     <- setdiff(colnames(classifier.all), non_kmer_cols)
 
     # 4b. Ensure k-mer columns are numeric (guards against factor/character import)
